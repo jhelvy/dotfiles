@@ -9,17 +9,12 @@ Skills are organized as one folder per skill type, each containing a `SKILL.md` 
 
 ### How to find skills
 
-**Step 1 — try the remote repo first (most up to date):**
-Fetch the skills index from GitHub:
-https://raw.githubusercontent.com/jhelvy/dotfiles/main/skills/
+Fetch the skills index from:
 
-List available skill folders, then fetch the raw content of any relevant SKILL.md like:
-https://raw.githubusercontent.com/jhelvy/dotfiles/main/skills/<skill-name>/SKILL.md
-
-**Step 2 — fall back to local if remote is unavailable** (e.g. no internet):
 ```
 /Users/jhelvy/gh/dotfiles/skills/
 ```
+
 List subdirectories, then read `<skill-name>/SKILL.md` for any that match the task.
 
 ### When to read a skill
