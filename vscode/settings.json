@@ -1,0 +1,69 @@
+{
+    "positron.assistant.enable": true,
+    "github.copilot.enable": {
+        "quarto": true
+    },
+    "workbench.welcomePage.walkthroughs.openOnInstall": false,
+    "positron.r.restoreWorkspace": false,
+    "positron.plots.darkFilter": false,
+    "workbench.startupEditor": "none",
+    "databot.researchPreviewAcknowledgment": "Acknowledged",
+    "window.commandCenter": 1,
+    "r.alwaysUseActiveTerminal": true,
+    "r.bracketedPaste": true,
+    "r.sessionWatcher": true,
+    "r.plot.useHttpgd": true,
+    "r.rterm.mac": "/Library/Frameworks/Python.framework/Versions/3.10/bin/radian",
+    "r.lsp.path": "/Library/Frameworks/R.framework/Resources/library",
+    "r.lsp.debug": true,
+    "r.lsp.diagnostics": true,
+    "files.associations": {
+        "*.R": "r",
+        "renv.lock": "json"
+    },
+    "[quarto]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "quarto.quarto",
+        "editor.wordWrap": "on",
+        "editor.guides.bracketPairs": "active",
+        "editor.language.brackets": [["::::", ":::"]],
+        "editor.language.colorizedBracketPairs": [
+        ["::::", ":::"]
+        ]
+    },
+    "[r]": {
+        "editor.formatOnSave": true
+    },
+    "r.rterm.option": [
+        "--no-save",
+        "--no-restore",
+        "--r-binary=/usr/local/bin/R"
+    ],
+    "editor.rulers": [
+        80,
+        {
+        "color": "#b22222",
+        "column": 120
+        }
+    ],
+    "files.watcherExclude": {
+        "**/.quarto/**": true
+    },
+    "search.exclude": {
+        "*/.quarto": true
+    },
+    "editor.fontSize": 17,
+    "console.fontSize": 17,
+    "editor.fontFamily": "Monaco, 'Courier New', monospace",
+    "editor.accessibilityPageSize": 16,
+    "quarto.render.renderOnSave": true,
+    "editor.minimap.sectionHeaderFontSize": 12,
+    "terminal.integrated.fontSize": 16,
+    "chat.editor.fontSize": 16,
+    "markdown.preview.fontSize": 16,
+    "workbench.colorTheme": "Default Dark Modern",
+    "workbench.preferredDarkColorTheme": "Kimbie Dark",
+    "editor.wordWrap": "on",
+    "workbench.editor.enablePreview": false,
+    "editor.defaultFormatter": "Posit.air-vscode"
+}

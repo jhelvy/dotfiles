@@ -1,0 +1,45 @@
+{
+    "font_size": 16,
+    "font_face": "Monaco",
+    "color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow-Night.tmTheme",
+    "auto_complete": true,
+    "auto_complete_selector": "source, text",
+    "caret_style": "solid",
+    "highlight_line": true,
+    "highlight_modified_tabs": true,
+    "line_padding_bottom": 0,
+    "line_padding_top": 0,
+    "mdpopups.use_sublime_highlighter": true,
+    "open_files_in_new_window": false,
+    "scroll_past_end": true,
+    "show_minimap": true,
+    "soda_class_tabs": false,
+    "soda_folder_icons": true,
+    "spell_check": true,
+    "tab_size": 2,
+    "theme": "SoDaReloaded Dark.sublime-theme",
+    "translate_tabs_to_spaces": true,
+    "trim_trailing_white_space_on_save": true,
+    "wide_caret": true,
+    "word_wrap": true,
+    "wrap_width": 80,
+    "rulers":
+    [
+        80
+    ],
+    "added_words":
+    [
+        "anonymize",
+        "poisson",
+        "indices",
+        "typeof",
+        "curation",
+        "powertrain",
+        "partworth"
+    ],
+    "ignored_packages":
+    [
+        "Vintage",
+    ],
+    "theme": "Soda Dark 3.sublime-theme"
+}

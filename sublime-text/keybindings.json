@@ -1,0 +1,71 @@
+[
+
+// Opens a Python 2.7 REPL
+{ "keys": ["super+option+p"],
+    "command": "repl_open",
+    "caption": "Python 2.7",
+    "mnemonic": "p",
+    "args": {
+        "type": "subprocess",
+        "encoding": "utf8",
+        "cmd": ["python2.7", "-i", "-u"],
+        "cwd": "$file_path",
+        "syntax": "Packages/Python/Python.tmLanguage",
+        "external_id": "python"
+    }
+},
+
+// Opens a Python 3.5 REPL
+{ "keys": ["super+p"],
+    "command": "repl_open",
+    "caption": "Python 3.10",
+    "mnemonic": "p",
+    "args": {
+        "type": "subprocess",
+        "encoding": "utf8",
+        "cmd": ["python3.10", "-i", "-u"],
+        "cwd": "$file_path",
+        "syntax": "Packages/Python/Python.tmLanguage",
+        "external_id": "python"
+    }
+},
+
+// Opens an R REPL
+{ "keys": ["super+shift+r"],
+    "command": "repl_open",
+    "caption": "R",
+    "mnemonic": "r",
+    "args": {
+        "type": "subprocess",
+        "encoding": "utf8",
+        "cmd": ["/usr/local/bin/R", "--interactive", "--no-readline"],
+        "cwd": "$file_path",
+        "syntax": "Packages/R/R Console.tmLanguage",
+        "external_id": "r",
+    }
+},
+
+// Send selected text to REPL
+{ "keys": ["ctrl+y"],
+    "command": "repl_transfer_current",
+    "args": {
+        "scope": "selection"
+    }
+},
+
+// Swap between columns
+{ "keys": ["ctrl+9"],
+    "command": "focus_group",
+    "args": {
+        "group": 0
+    }
+},
+
+{ "keys": ["ctrl+0"],
+    "command": "focus_group",
+    "args": {
+        "group": 1
+    }
+}
+
+]
