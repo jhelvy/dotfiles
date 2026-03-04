@@ -12,14 +12,14 @@ Skills are organized as one folder per skill type, each containing a `SKILL.md` 
 Fetch the skills index from:
 
 ```
-/Users/jhelvy/gh/dotfiles/skills/
+/Users/jhelvy/gh/dotfiles/claude/skills
 ```
 
 List subdirectories, then read `<skill-name>/SKILL.md` for any that match the task.
 
 ### When to read a skill
 
-- Match the task to a skill folder name (e.g. a data wrangling task → `data-analysis`)
+- Match the task to a skill folder name
 - If multiple skills seem relevant, read all of them
 - If no skill matches, proceed with your best judgment
 - You do not need to read skills for casual conversation or simple one-off questions
