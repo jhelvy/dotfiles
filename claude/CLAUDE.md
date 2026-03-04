@@ -12,7 +12,7 @@ Skills are organized as one folder per skill type, each containing a `SKILL.md` 
 Fetch the skills index from:
 
 ```
-/Users/jhelvy/gh/dotfiles/claude/skills
+~/.claude/skills
 ```
 
 List subdirectories, then read `<skill-name>/SKILL.md` for any that match the task.
@@ -28,3 +28,26 @@ List subdirectories, then read `<skill-name>/SKILL.md` for any that match the ta
 
 New skill folders added to the repo will be discovered automatically — no need to update
 these instructions.
+
+## Project instructions
+
+Always check for a `CLAUDE.md` file in the current project directory or its parents for
+project-specific instructions. These take precedence over global instructions where they
+conflict.
+
+## Using R
+
+When working with R:
+
+- Use `btw_tool_session_*` and `btw_tool_env_*` tools to inspect the active R session
+  before making assumptions about loaded data or packages
+- Prefer tidyverse packages over base R equivalents
+- Use the native pipe `|>` instead of `%>%`
+- Prefer `purrr` for iteration over `apply` family functions
+- Use `here::here()` for file paths, never hardcode absolute paths
+- If data frame is large, or if you detect use of data.table syntax, then use data.table for efficiency over tidyverse approaches.
+
+## Response style
+
+- Be concise — avoid unnecessary explanation or preamble
+

@@ -28,6 +28,7 @@ Then run these one-time symlinks:
 mkdir -p ~/.claude
 ln -s ~/gh/dotfiles/CLAUDE.md ~/.claude/CLAUDE.md
 ln -s ~/gh/dotfiles/claude/settings.json ~/.claude/settings.json
+ln -s ~/gh/dotfiles/claude/skills ~/.claude/skills
 ```
 
 That's all you need globally. Skills are loaded dynamically from the GitHub repo (with
