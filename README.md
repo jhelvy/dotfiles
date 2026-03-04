@@ -29,6 +29,11 @@ mkdir -p ~/.claude
 ln -s ~/gh/dotfiles/CLAUDE.md ~/.claude/CLAUDE.md
 ln -s ~/gh/dotfiles/claude/settings.json ~/.claude/settings.json
 ln -s ~/gh/dotfiles/claude/skills ~/.claude/skills
+ln -s ~/gh/dotfiles/claude/commands ~/.claude/commands
+ln -s ~/gh/dotfiles/claude/contexts ~/.claude/contexts
+ln -s ~/gh/dotfiles/claude/hooks ~/.claude/hooks
+ln -s ~/gh/dotfiles/claude/rules ~/.claude/rules
+ln -s ~/gh/dotfiles/claude/agents ~/.claude/agents
 ```
 
 That's all you need globally. Skills are loaded dynamically from the GitHub repo (with
