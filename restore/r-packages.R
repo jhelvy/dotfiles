@@ -7,6 +7,7 @@ packages_cran <- c(
     "brms",
     "broom",
     "bs4cards",
+    "btw",
     "Cairo",
     "carData",
     "cbcTools",
