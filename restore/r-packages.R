@@ -114,28 +114,34 @@ packages_dev <- c(
     'hansthompson/rusps',
     'hrbrmstr/hrbrthemes',
     'jhelvy/jph',
-    'gadenbuie/metathis', 
+    'jhelvy/renderthis',
+    'gadenbuie/metathis',
     'gadenbuie/rsthemes',
-    'gadenbuie/xaringanExtra', 
+    'gadenbuie/xaringanExtra',
     'r-lib/revdepcheck',
     'r-lib/ymlthis',
     'ropensci/rnaturalearthhires',
     'ropensci/rnaturalearthdata',
-    'wilkelab/gridtext'
+    'wilkelab/gridtext',
+    'gavinrozzi/zipcodeR',
+    'hrbrmstr/waffle'
 )
 
 # Install packages from CRAN
 install.packages(
     packages_cran,
     repos = 'https://cloud.r-project.org/',
-    dependencies = TRUE)
+    dependencies = TRUE
+)
 
 # Install dev packages from github
-pak::pak(packages_dev, force = TRUE)
+pak::pak(packages_dev)
 
 # Install qs package
 remotes::install_cran(
-    "qs", type = "source", configure.args = "--with-simd=AVX2"
+    "qs",
+    type = "source",
+    configure.args = "--with-simd=AVX2"
 )
 
 # Install RStudio themes
