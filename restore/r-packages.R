@@ -60,6 +60,7 @@ packages_cran <- c(
     "nloptr",
     "nycflights13",
     "officer",
+    "osrm",
     "pak",
     "pdftools",
     "postcards",
