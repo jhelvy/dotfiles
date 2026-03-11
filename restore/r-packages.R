@@ -22,6 +22,7 @@ packages_cran <- c(
     "devtools",
     "distill",
     "dslabs",
+    "echarts4r",
     "extrafont",
     "extrafontdb",
     "fcuk",
