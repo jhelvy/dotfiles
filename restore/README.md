@@ -23,6 +23,7 @@ Instructions for setting up new mac, including all R packages
 - Easy CSV Editor (apple store)
 - [Box](https://www.box.com/resources/downloads)
 - [Espanso](https://espanso.org/)
+- [kaku](https://github.com/tw93/Kaku)
 - [GWU VPN](https://it.gwu.edu/virtual-private-network-vpn)
 - [VLC](https://www.videolan.org/vlc/)
 - [Zoom](https://zoom.us/support/download)
@@ -134,15 +135,11 @@ Check Package Control for updated instructions: https://packagecontrol.io/instal
 
 Use Package control to load the following plugins:
 
-- Sublime REPL
-- R-Box
+- Sublime REPL - just install directly - Settings -> browse packages, drop in code (https://github.com/wuub/SublimeREPL/)
 - LaTeX Tools
-- Advanced New File
-- Sidebar Enhancements
 - Soda Theme: https://github.com/buymeasoda/soda-theme/
 - Tomorrow color schemes https://sublime.wbond.net/packages/Tomorrow%20Color%20Schemes
 - Text Wordcount
-- Alignment
 
 Copy-paste all the settings files into the user folder
 
