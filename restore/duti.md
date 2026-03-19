@@ -16,6 +16,7 @@ duti -s $BUNDLE_ID .R all
 duti -s $BUNDLE_ID .r all
 duti -s $BUNDLE_ID .Rmd all
 duti -s $BUNDLE_ID .rmd all
+duti -s $BUNDLE_ID .qmd all
 duti -s $BUNDLE_ID .Rnw all
 duti -s $BUNDLE_ID .Rprofile all
 duti -s $BUNDLE_ID .Renviron all
