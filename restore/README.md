@@ -17,6 +17,7 @@ Instructions for setting up new mac, including all R packages
 - [Whatpulse](https://whatpulse.org/)
 - [GitHub Desktop](https://desktop.github.com/)
 - [Brave browser](https://brave.com/)
+- [Slack](https://slack.com/downloads/)
 - [Google Chrome](https://www.google.com/chrome/)
 - [pCloud Drive](https://www.pcloud.com/download-free-online-cloud-file-storage.html)
 - [shortcat](https://shortcat.app/)
