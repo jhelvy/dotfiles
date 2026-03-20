@@ -40,6 +40,7 @@ Instructions for setting up new mac, including all R packages
 - Run and login to Whatpulse
 - Open RStudio and install tinytex: quarto install tinytex
 - Install fonts: https://github.com/emse-eda-gwu/2021-Spring/raw/master/content/fonts.zip
+- Set spokenly key to globe key, which is F13 from karabiner-elements
 
 # Chrome plugins
 
