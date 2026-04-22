@@ -26,7 +26,7 @@ Then run these one-time symlinks:
 ```bash
 # Global Claude Code instructions and permissions
 mkdir -p ~/.claude
-ln -s ~/gh/dotfiles/CLAUDE.md ~/.claude/CLAUDE.md
+ln -s ~/gh/dotfiles/claude/CLAUDE.md ~/.claude/CLAUDE.md
 ln -s ~/gh/dotfiles/claude/settings.json ~/.claude/settings.json
 ln -s ~/gh/dotfiles/claude/skills ~/.claude/skills
 ln -s ~/gh/dotfiles/claude/commands ~/.claude/commands
