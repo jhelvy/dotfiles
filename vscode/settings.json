@@ -32,26 +32,20 @@
         ]
     },
     "[r]": {
-        "editor.formatOnSave": true
+        "editor.formatOnSave": true,
+         "editor.rulers": [
+        80,
+        {
+        "color": "#b22222",
+        "column": 120
+        }
+    ]
     },
     "r.rterm.option": [
         "--no-save",
         "--no-restore",
         "--r-binary=/usr/local/bin/R"
     ],
-    "editor.rulers": [
-        80,
-        {
-        "color": "#b22222",
-        "column": 120
-        }
-    ],
-    "files.watcherExclude": {
-        "**/.quarto/**": true
-    },
-    "search.exclude": {
-        "*/.quarto": true
-    },
     "editor.fontSize": 17,
     "console.fontSize": 17,
     "editor.fontFamily": "Monaco, 'Courier New', monospace",
@@ -65,5 +59,13 @@
     "workbench.preferredDarkColorTheme": "Kimbie Dark",
     "editor.wordWrap": "on",
     "workbench.editor.enablePreview": false,
-    "editor.defaultFormatter": "Posit.air-vscode"
+    "editor.defaultFormatter": "Posit.air-vscode",
+    "git.openRepositoryInParentFolders": "never",
+    "explorer.confirmDelete": false,
+    "workbench.externalUriOpeners": {
+        "localhost:*": "default"
+    },
+    "positron.assistant.aiExcludes": [],
+    "editor.defaultFormatter": "Posit.air-vscode",
+    "github.copilot.nextEditSuggestions.enabled": true
 }
