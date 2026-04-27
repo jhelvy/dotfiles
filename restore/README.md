@@ -151,3 +151,7 @@ Copy-paste all the settings files into the user folder
 - Use search function, look for “Copy to Clipboard” and drag into the rightside panel of the Service
 - Set ‘Service recieves selected’ to “files or folders” and ‘in’ to “Finder” as shown in the screen shot below
 - Save the Service with a name like “Copy Path”
+
+# Set up ast-grep
+
+https://emilhvitfeldt.com/post/ast-grep-r-claude-code/

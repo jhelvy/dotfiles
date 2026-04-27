@@ -51,3 +51,14 @@ When working with R:
 
 - Be concise — avoid unnecessary explanation or preamble
 
+## ast-grep with R support
+
+R language support is configured globally via `~/.config/ast-grep/sgconfig.yml`.
+
+Usage:
+\```bash
+sg -l r -p 'pattern' .
+\```
+
+Note: Use `_VAR` for named metavariables and `___` for wildcards (not `$VAR`) because R uses `$` for column access.
+
