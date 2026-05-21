@@ -1,64 +1,46 @@
-# Claude Global Instructions
 
-## Skills
 
-Before starting any task, check if a relevant skill exists and read it before writing
-any code or files.
 
-Skills are organized as one folder per skill type, each containing a `SKILL.md` file.
 
-### How to find skills
+# CLAUDE.md
 
-Fetch the skills index from:
+Behavioral guidelines to reduce common LLM coding
+mistakes. Merge with project-specific instructions
+as needed.
 
-```
-~/.claude/skills
-```
+Tradeoff: These guidelines bias toward caution
+over speed. For trivial tasks, use judgment.
 
-List subdirectories, then read `<skill-name>/SKILL.md` for any that match the task.
+## 1. Think Before Coding
+Don't assume. Don't hide confusion. Surface tradeoffs.
 
-### When to read a skill
+Before implementing:
+- State your assumptions explicitly. If uncertain, ask.
+- If multiple interpretations exist, present them.
+- If a simpler approach exists, say so.
+- If something is unclear, stop. Name what's confusing.
 
-- Match the task to a skill folder name
-- If multiple skills seem relevant, read all of them
-- If no skill matches, proceed with your best judgment
-- You do not need to read skills for casual conversation or simple one-off questions
+## 2. Simplicity First
+Minimum code that solves the problem. Nothing speculative.
 
-### Adding new skills
+- No features beyond what was asked.
+- No abstractions for single-use code.
+- No “flexibility” that wasn't requested.
+- No error handling for impossible scenarios.
+- If 200 lines could be 50, rewrite it.
 
-New skill folders added to the repo will be discovered automatically — no need to update
-these instructions.
+## 3. Surgical Changes
+Touch only what you must. Clean up only your own mess.
 
-## Project instructions
+- Don't “improve” adjacent code or formatting.
+- Don't refactor things that aren't broken.
+- Match existing style, even if you'd do it differently.
+- If you notice dead code, mention it — don't delete it.
 
-Always check for a `CLAUDE.md` file in the current project directory or its parents for
-project-specific instructions. These take precedence over global instructions where they
-conflict.
+## 4. Goal-Driven Execution
+Define success criteria. Loop until verified.
 
-## Using R
-
-When working with R:
-
-- Use `btw_tool_session_*` and `btw_tool_env_*` tools to inspect the active R session
-  before making assumptions about loaded data or packages
-- Prefer tidyverse packages over base R equivalents
-- Use the native pipe `|>` instead of `%>%`
-- Prefer `purrr` for iteration over `apply` family functions
-- Use `here::here()` for file paths, never hardcode absolute paths
-- If data frame is large, or if you detect use of data.table syntax, then use data.table for efficiency over tidyverse approaches.
-
-## Response style
-
-- Be concise — avoid unnecessary explanation or preamble
-
-## ast-grep with R support
-
-R language support is configured globally via `~/.config/ast-grep/sgconfig.yml`.
-
-Usage:
-\```bash
-sg -l r -p 'pattern' .
-\```
-
-Note: Use `_VAR` for named metavariables and `___` for wildcards (not `$VAR`) because R uses `$` for column access.
-
+Transform tasks into verifiable goals:
+- “Add validation” → “Write tests, then make them pass”
+- “Fix the bug” → “Reproduce it in a test, then fix”
+- “Refactor X” → “Ensure tests pass before and after”
