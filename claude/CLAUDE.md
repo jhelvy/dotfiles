@@ -1,17 +1,9 @@
-
-
-
-
 # CLAUDE.md
 
-Behavioral guidelines to reduce common LLM coding
-mistakes. Merge with project-specific instructions
-as needed.
-
-Tradeoff: These guidelines bias toward caution
-over speed. For trivial tasks, use judgment.
+General rules
 
 ## 1. Think Before Coding
+
 Don't assume. Don't hide confusion. Surface tradeoffs.
 
 Before implementing:
@@ -21,6 +13,7 @@ Before implementing:
 - If something is unclear, stop. Name what's confusing.
 
 ## 2. Simplicity First
+
 Minimum code that solves the problem. Nothing speculative.
 
 - No features beyond what was asked.
@@ -30,6 +23,7 @@ Minimum code that solves the problem. Nothing speculative.
 - If 200 lines could be 50, rewrite it.
 
 ## 3. Surgical Changes
+
 Touch only what you must. Clean up only your own mess.
 
 - Don't “improve” adjacent code or formatting.
@@ -38,9 +32,18 @@ Touch only what you must. Clean up only your own mess.
 - If you notice dead code, mention it — don't delete it.
 
 ## 4. Goal-Driven Execution
+
 Define success criteria. Loop until verified.
 
 Transform tasks into verifiable goals:
 - “Add validation” → “Write tests, then make them pass”
 - “Fix the bug” → “Reproduce it in a test, then fix”
 - “Refactor X” → “Ensure tests pass before and after”
+
+## 5. Never run `quarto render` or similar rendering commands, always ask
+
+The user will always render the document themselves in their own terminal. Make code changes and report done; do not attempt to render.
+
+## 6. Never run `git` commands, always ask
+
+The user will always make commits using git themselves in their own terminal.
