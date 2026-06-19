@@ -23,5 +23,5 @@ Convert the PDF the user points to into an `output.md` file using the `markitdow
 
 ## Notes
 
-- `markitdown` is installed via Homebrew at `/opt/homebrew/bin/markitdown`.
+- `markitdown` is installed via `uv tool install "markitdown[pdf]"` at `~/.local/bin/markitdown` (on PATH; runs in its own isolated Python). If the command is missing, reinstall with `uv tool install "markitdown[pdf]"`.
 - If the conversion fails (e.g., scanned/image-only PDF with no extractable text), report the error to the user rather than attempting OCR workarounds.
