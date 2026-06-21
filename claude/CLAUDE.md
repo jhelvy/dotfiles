@@ -1,5 +1,11 @@
 # CLAUDE.md
 
+> **Source of truth**: This file lives in the dotfiles repo at
+> `/Users/jhelvy/gh/dotfiles/claude/CLAUDE.md`. The file at
+> `~/.claude/CLAUDE.md` is a symlink pointing here. Always edit
+> this file (`/Users/jhelvy/gh/dotfiles/claude/CLAUDE.md`), never
+> the symlink target directly.
+
 General rules
 
 ## 1. Think Before Coding
