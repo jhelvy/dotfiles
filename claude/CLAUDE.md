@@ -40,9 +40,10 @@ Transform tasks into verifiable goals:
 - “Fix the bug” → “Reproduce it in a test, then fix”
 - “Refactor X” → “Ensure tests pass before and after”
 
-## 5. Never run `quarto render` or similar rendering commands, always ask
+## 5. Rendering rules
 
-The user will always render the document themselves in their own terminal. Make code changes and report done; do not attempt to render.
+- LaTeX documents: You may compile using `pdflatex`, `bibtex`, and related commands.
+- All other document types (Quarto, R Markdown, etc.): Never render. The user will render these themselves.
 
 ## 6. Never run `git` commands, always ask
 
