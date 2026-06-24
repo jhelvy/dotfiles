@@ -11,6 +11,9 @@ dotfiles/
 ├── skills/
 │   └── <skill-name>/
 │       └── SKILL.md          # Instructions Claude reads for different tasks
+├── zsh/
+│   └── jp/
+│       └── <name>.zsh        # Personal zsh commands — symlinked to ~/.config/jp, sourced by ~/.zshrc
 ├── CLAUDE.md                 # Global Claude Code instructions — symlink to ~/.claude/CLAUDE.md
 └── README.md
 ```
@@ -56,6 +59,37 @@ committed to your project repos — which is intentional, since permissions are 
 Create a new folder under `skills/` with a `SKILL.md` inside, push to GitHub, and
 Claude will discover it automatically on the next session. No changes to `CLAUDE.md`
 needed.
+
+## Shell commands (`zsh/jp/`)
+
+Personal zsh commands live as one sourced function per file in `zsh/jp/`. The whole
+directory is symlinked to `~/.config/jp`, and `~/.zshrc` sources every file in it:
+
+```zsh
+for f in ~/.config/jp/*.zsh(N); do source "$f"; done
+```
+
+One-time symlink on a new machine:
+
+```bash
+mkdir -p ~/.config
+ln -s ~/gh/dotfiles/zsh/jp ~/.config/jp
+```
+
+Then add the loader line above to `~/.zshrc`.
+
+**Adding a command:** drop a new `zsh/jp/<name>.zsh` defining a single function
+`<name>()`, then `git push`. It auto-loads in the next shell — no `.zshrc` edits.
+Names are free-form (no required prefix).
+
+> **Why functions, not scripts:** anything that must change the current shell's
+> state (`cd`, env vars) has to be a *sourced function*. A standalone script on
+> `PATH` runs in a subshell and can't alter its parent shell. The `jp-command`
+> Claude skill scaffolds these for you.
+
+Current commands:
+
+- `yy` — launch yazi, then `cd` to the directory you quit in (`q` to cd, `Q` to skip).
 
 ## What lives here vs. what doesn't
 
