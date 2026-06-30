@@ -7,7 +7,8 @@ Personal configuration files and Claude Code settings.
 ```
 dotfiles/
 ├── claude/
-│   └── settings.json         # Claude Code global permissions — symlink to ~/.claude/settings.json
+│   ├── settings.json         # Claude Code global permissions — symlink to ~/.claude/settings.json
+│   └── project-memory/       # Per-project Claude memory — each symlinked into ~/.claude/projects/<slug>/memory
 ├── skills/
 │   └── <skill-name>/
 │       └── SKILL.md          # Instructions Claude reads for different tasks
@@ -54,6 +55,38 @@ folder and adjust as needed.
 Claude Code auto-adds `settings.local.json` to `.gitignore`, so it won't be accidentally
 committed to your project repos — which is intentional, since permissions are personal.
 
+## Claude project memory
+
+Claude Code stores per-project memory in `~/.claude/projects/<project-slug>/memory/`.
+That location is machine-local, so to keep memory portable the real files live here in
+`claude/project-memory/<readable-name>/`, and each project's `memory` folder is a
+symlink pointing back to it. New memory Claude writes for these projects lands in
+dotfiles automatically — just commit it.
+
+The `<project-slug>` is the project's absolute path with `/` replaced by `-` (e.g.
+`/Users/jhelvy/gh/teaching/intro-to-agentic-engineering` →
+`-Users-jhelvy-gh-teaching-intro-to-agentic-engineering`). This works across machines
+**only when a project lives at the same absolute path on each**.
+
+One-time setup on a new machine (run in `bash` — uses an associative array):
+
+```bash
+DOT="$HOME/gh/dotfiles/claude/project-memory"
+declare -A M=(
+  [-Users-jhelvy-gh-teaching-intro-to-agentic-engineering]=intro-to-agentic-engineering
+  [-Users-jhelvy-gh-surveydown-surveydown]=surveydown
+  [-Users-jhelvy-sync-00-current-llm-fuzzy-joins]=llm-fuzzy-joins
+  [-Users-jhelvy-Downloads-10-data-visualization]=data-visualization
+)
+for slug in "${!M[@]}"; do
+  mkdir -p "$HOME/.claude/projects/$slug"
+  ln -sfn "$DOT/${M[$slug]}" "$HOME/.claude/projects/$slug/memory"
+done
+```
+
+When Claude creates memory for a new project, add a `slug → folder` line to the map
+above so it syncs too.
+
 ## Adding new skills
 
 Create a new folder under `skills/` with a `SKILL.md` inside, push to GitHub, and
@@ -98,6 +131,8 @@ Current commands:
 | `CLAUDE.md` | ✅ Yes | Global instructions, fully portable |
 | `claude/settings.json` | ✅ Yes | Global permissions, symlinked to `~/.claude/` |
 | `skills/` | ✅ Yes | Reusable skill definitions |
+| `claude/project-memory/` | ✅ Yes | Per-project memory, symlinked into `~/.claude/projects/<slug>/memory` |
+| `~/.claude/projects/` itself | ❌ No | Machine-local session data; only the `memory` subfolders are symlinked |
 | Project-level `settings.local.json` | ❌ No | Copied (not symlinked) per project as needed |
 | Project-level `CLAUDE.md` | ❌ No | Stays inside each individual project repo |
 
