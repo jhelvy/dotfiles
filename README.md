@@ -77,6 +77,7 @@ declare -A M=(
   [-Users-jhelvy-gh-surveydown-surveydown]=surveydown
   [-Users-jhelvy-sync-00-current-llm-fuzzy-joins]=llm-fuzzy-joins
   [-Users-jhelvy-Downloads-10-data-visualization]=data-visualization
+  [-Users-jhelvy-gh-teaching-EDA-2026-Fall]=eda-2026-fall
 )
 for slug in "${!M[@]}"; do
   mkdir -p "$HOME/.claude/projects/$slug"
